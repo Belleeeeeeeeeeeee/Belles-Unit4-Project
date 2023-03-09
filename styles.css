@@ -1,0 +1,25 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #db8b7f;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    color: white;
+    font-family: 'waltograph', sans-serif;
+    font-size: 45px;
+
+}
+
+.result {
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
