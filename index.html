@@ -1,0 +1,78 @@
+<!DOCTYPE html> <html><head>
+        <title>Belle's Unit4 Project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #db8b7f;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    color: white;
+    font-family: 'waltograph', sans-serif;
+    font-size: 45px;
+
+}
+
+.result {
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What type of Ice-cream are you?</h1>
+        </div>
+        <div class="questions">
+            <h3>Do you have any siblings?</h3>
+            <input class="question1" placeholder="0-3 or 4-6">
+            <img src="http://images6.fanpop.com/image/photos/42600000/Walt-Disney-Gifs-Princess-walt-disney-characters-42672212-800-450.gif">
+            <h3>Which is your favorite place, Universal Studios or Disney?</h3>
+            <input class="question2" placeholder="Universal Studios or Disney">
+            <img src="https://cdn.justjaredjr.com/wp-content/uploads/headlines/2022/09/orlando-parks-closing.jpg">
+        </div>
+
+        <div class="result">
+            <div>
+                <button class="button">Click Here!</button>
+            </div>
+            This is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector(".button");
+
+button.onclick = function () {
+  var Q1 = document.querySelector(".question1").value;
+  var Q2 = document.querySelector(".question2").value;
+  var result = document.querySelector(".result");
+
+  if (Q1 <= 3 && Q2 === "Universal Studios") {
+    document.querySelector(".result").innerHTML = "You're Matcha";
+  } else if (Q1 <= 3 && Q2 === "Disney") {
+    document.querySelector(".result ").innerHTML = "You 're vanilla";
+  } else if (Q1 >= 4 || Q1 <= 6 && Q2 === "Universal Studios") {
+    document.querySelector(".result ").innerHTML = "You 're chocolate";
+  } else if (Q1 >= 4 || Q1 <= 6 && Q2 === "Disney") {
+    document.querySelector(".result").innerHTML = "You're cookies and cream";
+  } else {
+    document.querySelector(".result").innerHTML = "Try entering something!";
+  }
+
+  console.log(Q1);
+  console.log(Q2);
+  alert(Q1);
+  alert(Q2);
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIm9uY2xpY2siLCJRMSIsInZhbHVlIiwiUTIiLCJyZXN1bHQiLCJpbm5lckhUTUwiLCJjb25zb2xlIiwibG9nIiwiYWxlcnQiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLE1BQU0sR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7O0FBRUFGLE1BQU0sQ0FBQ0csT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLEVBQUUsR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDRyxLQUE5QztBQUNBLE1BQUlDLEVBQUUsR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDRyxLQUE5QztBQUNBLE1BQUlFLE1BQU0sR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7O0FBQ0EsTUFBSUUsRUFBRSxJQUFJLENBQU4sSUFBV0UsRUFBRSxLQUFLLG1CQUF0QixFQUEyQztBQUN2Q0wsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTSxTQUFsQyxHQUE4QyxlQUE5QztBQUNILEdBRkQsTUFFTyxJQUFJSixFQUFFLElBQUksQ0FBTixJQUFXRSxFQUFFLEtBQUssUUFBdEIsRUFBZ0M7QUFDbkNMLElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixFQUFtQ00sU0FBbkMsR0FBK0MsaUJBQS9DO0FBQ0gsR0FGTSxNQUVBLElBQUlKLEVBQUUsSUFBSSxDQUFOLElBQVdBLEVBQUUsSUFBSSxDQUFOLElBQVdFLEVBQUUsS0FBSyxtQkFBakMsRUFBc0Q7QUFDekRMLElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixFQUFtQ00sU0FBbkMsR0FBK0MsbUJBQS9DO0FBQ0gsR0FGTSxNQUVBLElBQUlKLEVBQUUsSUFBSSxDQUFOLElBQVdBLEVBQUUsSUFBSSxDQUFOLElBQVdFLEVBQUUsS0FBSyxRQUFqQyxFQUEyQztBQUM5Q0wsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTSxTQUFsQyxHQUE4QywwQkFBOUM7QUFDSCxHQUZNLE1BRUE7QUFDSFAsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTSxTQUFsQyxHQUE4Qyx5QkFBOUM7QUFDSDs7QUFDREMsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlOLEVBQVo7QUFDQUssRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlKLEVBQVo7QUFDQUssRUFBQUEsS0FBSyxDQUFDUCxFQUFELENBQUw7QUFDQU8sRUFBQUEsS0FBSyxDQUFDTCxFQUFELENBQUw7QUFDSCxDQW5CRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmJ1dHRvblwiKTtcblxuYnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiAgICBsZXQgUTEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMVwiKS52YWx1ZTtcbiAgICBsZXQgUTIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMlwiKS52YWx1ZTtcbiAgICBsZXQgcmVzdWx0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG4gICAgaWYgKFExIDw9IDMgJiYgUTIgPT09IFwiVW5pdmVyc2FsIFN0dWRpb3NcIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPSBcIllvdSdyZSBNYXRjaGFcIjtcbiAgICB9IGVsc2UgaWYgKFExIDw9IDMgJiYgUTIgPT09IFwiRGlzbmV5XCIpIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHQgXCIpLmlubmVySFRNTCA9IFwiWW91ICdyZSB2YW5pbGxhXCI7XG4gICAgfSBlbHNlIGlmIChRMSA+PSA0IHx8IFExIDw9IDYgJiYgUTIgPT09IFwiVW5pdmVyc2FsIFN0dWRpb3NcIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdCBcIikuaW5uZXJIVE1MID0gXCJZb3UgJ3JlIGNob2NvbGF0ZVwiO1xuICAgIH0gZWxzZSBpZiAoUTEgPj0gNCB8fCBRMSA8PSA2ICYmIFEyID09PSBcIkRpc25leVwiKSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTCA9IFwiWW91J3JlIGNvb2tpZXMgYW5kIGNyZWFtXCI7XG4gICAgfSBlbHNlIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MID0gXCJUcnkgZW50ZXJpbmcgc29tZXRoaW5nIVwiO1xuICAgIH1cbiAgICBjb25zb2xlLmxvZyhRMSk7XG4gICAgY29uc29sZS5sb2coUTIpO1xuICAgIGFsZXJ0KFExKTtcbiAgICBhbGVydChRMik7XG59OyJdfQ==</script></body></html>
